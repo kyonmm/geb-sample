@@ -1,0 +1,22 @@
+apply plugin:"groovy"
+apply plugin:"idea"
+
+defaultTasks "test"
+
+repositories{
+  jcenter()
+}
+
+dependencies{
+  compile "org.codehaus.groovy:groovy-all:2.3.+"
+  def gebVersion = "0.10.0"
+  def seleniumVersion = "2.+"
+ 
+  // If using Spock, need to depend on geb-spock
+  testCompile "org.gebish:geb-spock:$gebVersion"
+  testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+ 
+  // Need a driver implementation
+  testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+  testRuntime "org.seleniumhq.selenium:selenium-support:$seleniumVersion"
+}
