@@ -15,6 +15,7 @@ dependencies{
   // If using Spock, need to depend on geb-spock
   testCompile "org.gebish:geb-spock:$gebVersion"
   testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
+  testCompile "com.athaydes:spock-reports:1.2"
  
   // Need a driver implementation
   testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
